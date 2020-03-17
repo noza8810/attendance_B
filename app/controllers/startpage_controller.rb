@@ -1,4 +1,4 @@
 class StartpageController < ApplicationController
-  def Top
+  def top
   end
 end
