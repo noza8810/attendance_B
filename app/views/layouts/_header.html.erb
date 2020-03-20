@@ -3,8 +3,24 @@
     <%= link_to "勤怠システム", root_url, class: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "トップへ", "#" %></li>
-        <li><%= link_to "ログイン", "#" %></li>
+        <li><%= link_to "トップへ", root_url %></li>
+        <%if logged_in? %>
+          <li><%= link_to "ユーザー一覧", users_path %></li>
+          <li><%= link_to "基本情報の修正", "#" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              アカウント
+            </a>
+            <ul class="dropdown-menu">
+              <li></li>
+              <li></li>
+              <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "ログイン", login_path %></li>
+        <% end %>
+        
       </ul>
     
     </nav>
