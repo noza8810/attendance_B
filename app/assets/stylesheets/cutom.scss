@@ -47,3 +47,52 @@ p {
   padding-top: 9px;
   font-weight: bold;
 }
+
+/* debug */
+
+.debug_dump {
+  clear: both;
+  // float: left;
+  width: 100%;
+  margin-top: 100px;
+  box-sizing: border-box;
+}
+
+/* table */
+.user-table{
+  vertical-align: baseline;
+  text-align: center; 
+}
+
+/* form */
+.label-signup{
+  margin-top: 5px;
+}
+
+.btn-signup{
+  margin-top: 15px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px
+  
+}
+
+/* error */
+
+.error_explanation{
+  color: red;
+  ul {
+    color: red;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
