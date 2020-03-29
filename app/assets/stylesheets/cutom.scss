@@ -59,17 +59,24 @@ p {
 }
 
 /* table */
-.user-table{
+.user-table {
   vertical-align: baseline;
   text-align: center; 
 }
 
+table-users {
+  td {
+    vertical-align: middle;
+    
+  }
+}
+
 /* form */
-.label-signup{
+.label-signup {
   margin-top: 5px;
 }
 
-.btn-signup{
+.btn-signup {
   margin-top: 15px;
   display: inline-block;
   padding: 0.5em 1em;
@@ -83,7 +90,7 @@ p {
 
 /* error */
 
-.error_explanation{
+.error_explanation {
   color: red;
   ul {
     color: red;
@@ -123,3 +130,4 @@ p {
     font-weight: normal;
   }
 }
+
