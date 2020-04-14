@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :destroy]
-  before_action :logged_in_user, only: [:index, :show, :edit, :destroy]
+  before_action :set_user, only: [:show, :edit, :destroy, :edit_basic_info, :update_basic_info]
+  before_action :logged_in_user, only: [:index, :show, :edit, :destroy, :edit_basic_info, :update_basic_info]
   before_action :correct_user, only: :edit
-  before_action :admin_user, only: :destroy
+  before_action :admin_user, only: [:destroy, :edit_basic_info, :update_basic_info]
+  before_action :set_one_month, only: :show
   
   def new
     @user = User.new
   end
   
   def show
-    
+   @work_sum = @attendances.where.not(started_at: nil).count
   end
   
   def index
@@ -37,10 +38,30 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
   
+  def edit_basic_info
+    
+  end
+  
+  def update_basic_info
+    @users = User.all
+    @users.each do |users|
+      if users.update_attributes(basic_info_params)
+      flash[:success] = "更新しました。"
+      else
+      flash[:danger] = "更新は失敗しました。<br>" + users.errors.full_messages.join("<br>")
+      end
+    end
+    redirect_to users_url
+  end
+  
   private
   
     def user_params
       params.require(:user).permit(:name, :email, :department, :password, :password_confirmation)
+    end
+    
+    def basic_info_params
+      params.require(:user).permit(:basic_time, :work_time)
     end
     
     # beforeフィルター

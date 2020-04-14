@@ -59,16 +59,18 @@ p {
 }
 
 /* table */
-.user-table {
-  vertical-align: baseline;
-  text-align: center; 
-}
 
-table-users {
+
+.table-users {
   td {
     vertical-align: middle;
     
   }
+}
+
+.btn-show-edit { 
+  margin-bottom: 10px;
+  
 }
 
 /* form */
@@ -130,4 +132,24 @@ table-users {
     font-weight: normal;
   }
 }
+
+/* basic_info */
+.label-basic-info {
+  margin-top: 5px;
+}
+
+.btn-edit{
+  
+  margin-top: 15px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px
+  
+}
+
 

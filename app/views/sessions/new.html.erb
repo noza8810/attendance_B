@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-md-12">
     <%= form_with(scope: :session, url:login_path, local: true) do |f| %>
-    
+     
       <%= f.label :email, "メールアドレス", class: "label-login" %>
       <%= f.email_field :email, class: "form-control" %>
       
