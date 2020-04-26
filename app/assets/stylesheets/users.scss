@@ -1,5 +1,9 @@
 /* ユーザー情報テーブル */
 
+.page {
+  margin-top: 10%;
+}
+
 .user-table {
   
   text-align: center; 
@@ -11,4 +15,27 @@
   td {
     font-weight:  bold;
   }
+}
+
+/* 検索フォーム */
+h2 {
+  font-size: 1em;
+  font-weight :bold;
+  position:absolute;
+  top: -35px;
+  
+}
+
+.search-box {
+  outline:0;/*クリック時の青い枠線消す*/	
+  padding:0 10px;/*テキスト位置調整*/	 
+  border-radius:2px 0 0 2px;/*検索ボックスの角を丸める*/
+}
+
+.btn-search {
+
+}
+.search { 
+  margin-left: 60%;
+  margin-bottom: -10%;
 }

@@ -1,7 +1,7 @@
 <%= provide(:titile,"Edit") %>
 
 <h1>基本情報の更新</h1>
-<div class ="row" %>
+<div class ="row">
   <%= form_with(model: @user, local: true, method: :patch) do |f| %>
     <%= render 'shared/error_messages' %>
     

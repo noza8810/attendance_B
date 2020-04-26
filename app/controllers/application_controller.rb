@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   
   $days_of_the_week = %w{日 月 火 水 木 金 土}
-  
+
   # beforeフィルター
   # paramsハッシュからユーザーを取得する
   def set_user
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   # アクセスしたユーザーが現在ログインしているユーザーか確認する
   def correct_user
     @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+    redirect_to(root_url) unless current_user?(@user) || current_user.admin?
   end
   
   # システム管理権限があるユーザーか確認

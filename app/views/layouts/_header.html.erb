@@ -14,8 +14,8 @@
               アカウント
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "勤怠", current_user %></li>
-              <li><%= link_to "設定", edit_user_path(current_user) %></li>
+              <li><%= link_to "勤怠ページ表示", current_user %></li>
+              <li><%= link_to "個人情報編集", edit_user_path(current_user) %></li>
               <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
             </ul>
           </li>
